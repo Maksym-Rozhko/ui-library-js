@@ -1,14 +1,13 @@
 import './lib/lib';
 
 $('button').on('click', function() {
-    $(this).toggleClass('active');
-
+    $('div').eq(2).toggleClass('active');
 });
 
-$('button').on('mouseenter', function() {
-    $(this).addClass('active');
+$('div').click(function() {
+    console.log($(this).index());
 });
 
-$('button').on('mouseleave', function() {
-    $(this).removeClass('active');
-});
+console.log($('div').eq(2).find('.more'));
+
+// console.log('button:', $('button').html('Try click'));
