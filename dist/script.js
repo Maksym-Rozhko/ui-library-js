@@ -458,6 +458,38 @@ _core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.fadeOut = function (dura
   return this;
 };
 
+_core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.fadeToggle = function (duration) {
+  let display = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'block';
+  let finaly = arguments.length > 2 ? arguments[2] : undefined;
+
+  for (let i = 0; i < this.length; i++) {
+    if (window.getComputedStyle(this[i]).display === 'none') {
+      this[i].style.display = display;
+
+      const _fadeIn = complection => {
+        this[i].style.opacity = complection;
+      };
+
+      const animate = this.animateOverTime(duration, _fadeIn, finaly);
+      requestAnimationFrame(animate);
+    } else {
+      const _fadeOut = complection => {
+        this[i].style.opacity = 1 - complection;
+
+        if (complection === 1) {
+          this[i].style.display = 'none';
+        }
+      };
+
+      const animate = this.animateOverTime(duration, _fadeOut, finaly);
+      requestAnimationFrame(animate);
+    }
+  }
+
+  ;
+  return this;
+};
+
 /***/ }),
 
 /***/ "./src/js/lib/modules/handlers.js":
@@ -528,16 +560,15 @@ _core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.click = function (handle
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lib_lib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lib/lib */ "./src/js/lib/lib.js");
 
-$('button').on('click', function () {
-  $('div').eq(2).toggleClass('active');
+$('#first').on('click', () => {
+  $('div').eq(1).fadeOut(800);
 });
-$('div').click(function () {
-  console.log($(this).index());
-}); // console.log($('div').eq(2).find('.more'));
-// console.log($('.some').closest('.parent').addClass('new-class'));
-// console.log('button:', $('button').html('Try click'));
-// console.log($('.parent').siblings());
-// $('button').fadeOut(1800);
+$('[data-count="second"]').on('click', () => {
+  $('div').eq(2).fadeOut(800);
+});
+$('button').eq(2).on('click', () => {
+  $('.w-500').fadeToggle(800);
+});
 
 /***/ })
 

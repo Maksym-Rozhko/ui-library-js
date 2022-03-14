@@ -1,15 +1,13 @@
 import './lib/lib';
 
-$('button').on('click', function() {
-    $('div').eq(2).toggleClass('active');
+$('#first').on('click', () => {
+    $('div').eq(1).fadeOut(800);
 });
 
-$('div').click(function() {
-    console.log($(this).index());
+$('[data-count="second"]').on('click', () => {
+    $('div').eq(2).fadeOut(800);
 });
 
-// console.log($('div').eq(2).find('.more'));
-// console.log($('.some').closest('.parent').addClass('new-class'));
-// console.log('button:', $('button').html('Try click'));
-// console.log($('.parent').siblings());
-// $('button').fadeOut(1800);
+$('button').eq(2).on('click', () => {
+    $('.w-500').fadeToggle(800);
+});
