@@ -42,8 +42,103 @@
             </ul>
         </div>
 
-        <div class="wrap">
-            
+        <div class="wrap"></div>
+
+        <!-- Card -->
+        <div class="goods d-flex f-space-around">
+            <div class="card">
+                <img src="https://media.proglib.io/wp-uploads/2018/03/EzgdmaCQuT84bgDL4fhXZS.jpg" alt="image" class="card__image">
+                <div class="card__body">
+                    <h2 class="card__title">
+                        Card title
+                    </h2>
+                    <p class="card__descr">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Cum id porro vel.
+                    </p>
+                    <a  data-toggle="modal" data-target="#exampleModal2" href="#" class="btn btn-outline-success card__link">
+                        Lint to
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://media.proglib.io/wp-uploads/2018/03/EzgdmaCQuT84bgDL4fhXZS.jpg" alt="image" class="card__image">
+                <div class="card__body">
+                    <h2 class="card__title">
+                        Card title
+                    </h2>
+                    <p class="card__descr">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Cum id porro vel.
+                    </p>
+                    <a data-toggle="modal" data-target="#exampleModal" href="#" class="btn btn-outline-success card__link">
+                        Lint to
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal" id="exampleModal">
+            <div class="modal__dialog">
+                <div class="modal__content">
+                    <button data-close class="modal__close">
+                        <span>&times;</span>
+                    </button>
+                    <div class="modal__header">
+                        <h2 class="modal__title">
+                            Modal title
+                        </h2>
+                    </div>
+                    <div class="modal__body">
+                        <p class="modal__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Doloribus corrupti eum, et ad, alias commodi earum ipsa 
+                            saepe necessitatibus rerum dolor aliquam numquam mollitia 
+                            sequi vel reprehenderit repellendus. Quasi ad rem assumenda, 
+                            quaerat aspernatur minima alias iusto temporibus consectetur?
+                        </p>
+                    </div>
+                    <div class="modal__footer">
+                        <button type="button" class="btn btn-danger" data-close>
+                            Close
+                        </button>
+                        <button type="button" class="btn btn-success">
+                            Save changes
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="exampleModal2">
+            <div class="modal__dialog">
+                <div class="modal__content">
+                    <button data-close class="modal__close">
+                        <span>&times;</span>
+                    </button>
+                    <div class="modal__header">
+                        <h2 class="modal__title">
+                            Modal title 2
+                        </h2>
+                    </div>
+                    <div class="modal__body">
+                        <p class="modal__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit2. 
+                            sequi vel reprehenderit repellendus. Quasi ad rem assumenda2, 
+                            quaerat aspernatur minima alias iusto temporibus consectetur2?
+                        </p>
+                    </div>
+                    <div class="modal__footer">
+                        <button type="button" class="btn btn-danger" data-close>
+                            Close
+                        </button>
+                        <button type="button" class="btn btn-success">
+                            Save changes
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <script src='script.js'></script>
